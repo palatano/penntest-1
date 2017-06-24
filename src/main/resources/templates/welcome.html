@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>First Project Test Example</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Import CSS and bootstrap. -->
+    <link rel="stylesheet" type="text/css"
+           href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" th:href="@{/css/main.css}"
+          href="../../css/main.css" />
+</head>
+<body>
+    <!-- Include the navigation bar widget. -->
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <!-- Create header, or title, in the most top-left place -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Spring Boot</a>
+            </div>
+            <!-- Create a collapsable widget right of the header, with Home and About-->
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- In the body of the side, create a container containing the title and a message. -->
+    <div class="container">
+
+        <div class="starter-template">
+            <h1>First Project Test Example</h1>
+            <h2>
+                <span th:text="'Message: ' + ${message}"></span>
+            </h2>
+        </div>
+
+    </div>
+    <!-- /.container -->
+    <script type="text/javascript"
+            src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

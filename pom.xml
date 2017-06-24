@@ -6,11 +6,10 @@
 	<groupId>com.example</groupId>
 	<artifactId>nctesting-1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<url>https://www.pabstest.herokuapp.com</url>
 	<packaging>jar</packaging>
 
-	<name>demo</name>
-	<description>Demo project for Spring Boot</description>
-
+	<!-- Inherit the spring framework boot-starter-parent. -->
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -18,6 +17,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
+	<!-- Define the java version and source/output encoding. -->
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -25,9 +25,11 @@
 	</properties>
 
 	<dependencies>
+		<!-- Include the web, test, and thymeleaf dependencies. -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<optional>true</optional>
 		</dependency>
 
 		<dependency>
@@ -35,8 +37,26 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+
+		<!-- Optional, for bootstrap -->
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>bootstrap</artifactId>
+			<version>3.3.7</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-test</artifactId>
+			<version>RELEASE</version>
+		</dependency>
 	</dependencies>
 
+	<!-- Maven plugin to build a jar -->
 	<build>
 		<plugins>
 			<plugin>
